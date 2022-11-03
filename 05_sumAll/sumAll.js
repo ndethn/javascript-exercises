@@ -4,6 +4,10 @@ const sumAll = function (val1, val2) {
     let totalSum = 0;
     // use a for loop to increment between val1 and val2
     // to grab each number between val1 and val2
+    // condition for negative numbers
+    if (val1 < 0 || val2 < 0){
+        return "ERROR";
+    }
     // condition if val2 is greater
     if (val1 < val2) {
         for (let i = val1 - 1; i <= val2; i++) {
