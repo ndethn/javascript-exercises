@@ -2,6 +2,8 @@
 const sumAll = function (val1, val2) {
     // declare total variable
     let totalSum = 0;
+    // condition for non numbers
+    if (!Number.isInteger(val1) || !Number.isInteger(val2)) return "ERROR";
     // condition for negative numbers
     if (val1 < 0 || val2 < 0) {
         return "ERROR";
