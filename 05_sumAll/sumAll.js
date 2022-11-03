@@ -1,11 +1,19 @@
-// set parameters as min value and max value
-const sumAll = function(min, max) {
+// set parameters as val1 value and max value
+const sumAll = function (val1, val2) {
     // declare total variable
     let totalSum = 0;
-    // use a for loop to increment between min and max
-    // to grab each number between min and max
-    for (let i = min - 1; i <= max; i++){
-        totalSum += i;
+    // use a for loop to increment between val1 and val2
+    // to grab each number between val1 and val2
+    // condition if val2 is greater
+    if (val1 < val2) {
+        for (let i = val1 - 1; i <= val2; i++) {
+            totalSum += i;
+        }
+        // condition if val1 is greater
+    } else {
+        for (let i = val2 - 1; i <= val1; i++) {
+            totalSum += i;
+        }
     }
     // return total
     return totalSum;
