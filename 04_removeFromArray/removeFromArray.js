@@ -1,22 +1,19 @@
 const removeFromArray = function (...theArgs) {
-    // declare the rest parameter into an array
-    const argsValue = theArgs;
-    // declare for loop to iterate through each index of arr
-    for (let i = 0; i < argsValue.length; i++) {
-        // if value matches the element index -> remove it
-        if (argsValue[i] === argsValue) {
-            argsValue.splice(i, 1);
-            i--;
-            // loop through the args arr
-            for (let j = 0; j < argsValue.length; j++) {
-                if (argsValue[i] === argsValue[i]) {
-                    argsValue.splice(i, 1);
-                    i--;
-                }
-            }
+    // first item of the arguments is the array, pull it out with args[0]
+    const array = theArgs[0];
+    // create new empty array
+    const newArray = [];
+    // use forEach to go through the array
+    array.forEach((item) => {
+        // push every element into the new array
+        // UNLESS it is included in the function arguments
+        // create a new array with every item, except those that should be removed
+        if (!theArgs.includes(item)) {
+            newArray.push(item);
         }
-    }
-    return argsValue;
+    });
+    // and return that array
+    return newArray;
 };
 
 // Do not edit below this line
