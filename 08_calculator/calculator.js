@@ -7,11 +7,7 @@ const subtract = function(a, b) {
 };
 
 const sum = function(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum;
+  return arr.reduce((acc, currVal) => acc + currVal, 0);
 };
 
 const multiply = function(valueArray) {
