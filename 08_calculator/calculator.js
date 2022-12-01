@@ -16,15 +16,25 @@ const multiply = function(valuesArr) {
 
 const power = function(a, b) {
 	return a ** b;
+  // return Math.pow(a,b);
 };
 
 const factorial = function(num) {
 	let value = 1;
   for (let i = 2; i <= num; i++) {
-    value = value * i;
+    value *=  i;
   }
   return value;
 };
+
+// This is another implementation of Factorial that uses recursion
+// const recursiveFactorial = function(n) {
+//   if (n === 0) {
+//     return 1;
+//   }
+//   return n * recursiveFactorial (n-1);
+// };
+
 
 // Do not edit below this line
 module.exports = {
