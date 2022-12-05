@@ -1,5 +1,5 @@
-const palindromes = function () {
-
+const palindromes = function (str) {
+    return true;
 };
 
 // Do not edit below this line
